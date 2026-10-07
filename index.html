@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#08080c">
+    <meta name="description" content="Nearby Battle - Local multiplayer mini games">
+
+    <title>Nearby Battle</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HOME SCREEN -->
+        <main id="homeScreen" class="screen active">
+
+            <header class="top-bar">
+                <div>
+                    <p class="mini-title">LOCAL MULTIPLAYER</p>
+                    <h1>Nearby <span>Battle</span></h1>
+                </div>
+
+                <div class="connection-dot" id="connectionDot"></div>
+            </header>
+
+            <section class="hero">
+                <div class="hero-icon">⚔️</div>
+
+                <h2>Ready to Battle?</h2>
+
+                <p>
+                    Connect with a nearby player and challenge them
+                    to quick mini-games.
+                </p>
+
+                <button id="connectBtn" class="primary-btn">
+                    <span>📡</span>
+                    Find Nearby Player
+                </button>
+            </section>
+
+            <section class="games-section">
+
+                <div class="section-heading">
+                    <h3>Battle Games</h3>
+                    <span>5 Games</span>
+                </div>
+
+                <div class="games-grid">
+
+                    <button class="game-card" data-game="tap-war">
+                        <div class="game-icon">👆</div>
+                        <div>
+                            <h4>Tap War</h4>
+                            <p>Tap faster than your rival.</p>
+                        </div>
+                    </button>
+
+                    <button class="game-card" data-game="reaction">
+                        <div class="game-icon">⚡</div>
+                        <div>
+                            <h4>Reaction Test</h4>
+                            <p>Who reacts first?</p>
+                        </div>
+                    </button>
+
+                    <button class="game-card" data-game="number-rush">
+                        <div class="game-icon">🔢</div>
+                        <div>
+                            <h4>Number Rush</h4>
+                            <p>Complete the sequence.</p>
+                        </div>
+                    </button>
+
+                    <button class="game-card" data-game="rps">
+                        <div class="game-icon">✊</div>
+                        <div>
+                            <h4>Rock Paper Scissors</h4>
+                            <p>Classic battle.</p>
+                        </div>
+                    </button>
+
+                    <button class="game-card" data-game="drawing">
+                        <div class="game-icon">🎨</div>
+                        <div>
+                            <h4>Drawing Battle</h4>
+                            <p>Draw. Guess. Win.</p>
+                        </div>
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section class="player-card">
+
+                <div class="player-avatar">N</div>
+
+                <div class="player-info">
+                    <span>PLAYER</span>
+                    <h3>NoX</h3>
+                </div>
+
+                <div class="player-stats">
+                    <div>
+                        <strong id="wins">0</strong>
+                        <span>Wins</span>
+                    </div>
+
+                    <div>
+                        <strong id="losses">0</strong>
+                        <span>Losses</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- CONNECTION SCREEN -->
+        <main id="connectionScreen" class="screen">
+
+            <button id="backBtn" class="back-btn">
+                ← Back
+            </button>
+
+            <div class="connection-content">
+
+                <div class="radar">
+                    <div class="radar-ring ring-one"></div>
+                    <div class="radar-ring ring-two"></div>
+                    <div class="radar-center">📡</div>
+                </div>
+
+                <h2>Searching...</h2>
+
+                <p id="connectionStatus">
+                    Looking for nearby players
+                </p>
+
+                <div class="fake-device">
+                    <span class="device-dot"></span>
+                    <span>Nearby Battle</span>
+                </div>
+
+                <button id="cancelSearch" class="secondary-btn">
+                    Cancel
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+  </html>
